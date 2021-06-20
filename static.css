@@ -1,321 +1,160 @@
-
-.wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    margin-top: -262px;
-    margin-left: 1500px;
-    
-}
-.laptop{
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    align-content: center;
-    margin-top: 200px;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
 }
 
-.laptopTitle{
-    display: grid;
-    place-items: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.laptopText{
-    word-wrap: wrap;
-}
-
-.button {
-    background-color: orange; 
-    color: white; 
-    border: 2px solid orange;
-  }
-  
-.button {
-    background-color:orange;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-
-.button:hover {
-    background-color: orange;
-    color: white;
-  }
-
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-.aboutButton {
-  background-color:rgb(39, 39, 231);
+.navItem {
   color: white;
-  padding: 15px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 12px;
 }
 
-.About {
-  position: relative;
-  display: inline-block; 
+#kastBorder {
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 2px;
+  margin-right: 5px;
 }
 
-.About-content {
+.hero {
+  background-image: url(./assets2/gradient-violet-bg.jpeg);
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.aboutSub {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(168, 166, 166, 0.2);
+}
+
+.aboutSub a {
+  /* display: block; */
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  padding: 10px;
+}
+
+#about:hover .aboutSub {
+  display: flex;
+  flex-direction: column;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.communitySub {
+  display: none;
+  position: absolute;
+  background-color: white;
   z-index: 1;
 }
 
-.About-content a {
+.communitySub a {
+  /* display: block; */
   color: black;
-  padding: 12px 16px;
+  text-align: left;
   text-decoration: none;
-  display: block;
+  padding: 10px;
 }
 
-.About-content a:hover {background-color: #f1f1f1}
-
-.About:hover .aboutButton {
-  display: block;
+#community:hover .communitySub {
+  display: flex;
+  flex-direction: column;
 }
 
-.About:hover .About {
-  background-color: #3e8e41;
-}
-
-
-
-.communityButton {
-  background-color: rgb(39, 39, 231);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.Community {
-  position: relative;
-  display: inline-block;
-  transform: translateX(-500px);
-}
-
-.Community-content {
+.helpSub {
   display: none;
   position: absolute;
-  background-color: red;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: white;
   z-index: 1;
 }
 
-.Community-content a {
+.helpSub a {
+  /* display: block; */
   color: black;
-  padding: 12px 16px;
+  text-align: left;
   text-decoration: none;
-  display: block;
+  padding: 10px;
 }
 
-.Community-content a:hover {background-color: none}
-
-.Community:hover .communityButton {
-  display: block;
+#help:hover .helpSub {
+  display: flex;
+  flex-direction: column;
 }
 
-.Community:hover .Community {
-  background-color: none;
-}
-
-
-.helpButton {
-  background-color: rgb(39, 39, 231);
+.container1 {
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 50%;
+  border: 3px;
+  /* padding: 150px; */
+  text-align: center;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  width: 80%;
+}
+
+.container2Wrapper {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.container2-sub {
+  text-align: center;
+}
+
+.OPEN-KAST {
+  color: white;
   border: none;
-  cursor: pointer;
-}
-
-.Help {
-  position: relative;
-  display: inline-block;
-}
-
-.Help-content {
-  display: none;
-  position: absolute;
-  background-color: red;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.Help-content a {
-  color: black;
-  padding: 12px 16px;
+  background-color: #fe9000;
+  text-align: center;
   text-decoration: none;
-  display: block;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  width: 200px;
 }
 
-.Help-content a:hover {background-color: none}
-
-.Help:hover .helpButton {
-  display: block;
+.OPEN-KAST a:visited a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.Help:hover .Help {
-  background-color: none;
+.featured-logo {
+  flex: 0 32%;
+  margin-bottom: 55px;
 }
-.premiumButton {
-    background-color: rgb(39, 39, 231);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .Premium {
-    position: relative;
-    display: inline-block;
-  }
-  .Premium-content {
-    display: none;
-    position: absolute;
-    background-color: red;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .Premium-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .Premium-content a:hover {background-color: none}
-  
-  .Premiumhover .premiumButton {
-    display: block;
-  }
-  
-  .Premium:hover .Premium {
-    background-color: none;
-  }
-
-
-.logo{
-    height: 25vh;
-    display: flex;
-    justify-self: start;
-    align-items: flex-start;
-}
-
-.flex-container1 {
-    display: flex;
-    flex-direction: column;
-    background-color: orange;
-  }
-
-  .flex-container1 > div {
-    background-color: orange;
-    width: 100px;
-    margin: 450px;
-    text-align: left;
-    line-height: 75px;
-    font-size: 30px;
-  }
-
-  .flex-container2 {
-    display: flex;
-    flex-direction: column;
-    background-color: turquoise;
-  }
-
-  .flex-container2 > div {
-    background-color: turquoise;
-    width: 100px;
-    margin: 450px;
-    text-align: left;
-    line-height: 75px;
-    font-size: 30px;
-  }
-  
-  .flex-container3 {
-    display: flex;
-    flex-direction: column;
-    background-color: gray;
-  }
-  
-  .flex-container3 > div {
-    background-color: gray;
-    width: 100px;
-    margin: 450px;
-    text-align: left;
-    line-height: 75px;
-    font-size: 30px;
-  }
-
-
-  
-  .row {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  
-  /* Create three equal columns that sits next to each other */
-  .column {
-    flex: 33.33%;
-    padding: 5px;
-  }
-
-  a:link, a:visited {
-    background-color: lightskyblue;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  a:hover, a:active {
-      background-color: none;
-  }
